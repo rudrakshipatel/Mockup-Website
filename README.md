@@ -12,7 +12,7 @@ It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anyw
   - A booking form (name, service, date, time, notes) that turns into a ready-to-send WhatsApp message.
 - **English / Arabic** switch with full right-to-left layout and Arabic fonts (Tajawal and Amiri). The site remembers each visitor's choice. You can also link straight to a language with `?lang=ar`.
 - **Services and price list**
-  - 7 categories, shown as cards and as a price table with tabs.
+  - 6 categories, shown as cards and as a price table with tabs.
   - Prices can be a single amount, a range or a "from" price, and they show Arabic numerals in Arabic.
 - **Gallery** with category filters and a full-screen image viewer that works with the keyboard.
 - **Google Maps** embedded map, a **Get directions** button, and links to the **Google listing** and **Write a review**.
