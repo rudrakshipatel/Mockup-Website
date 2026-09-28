@@ -20,11 +20,11 @@ It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anyw
 
 ## Before going live: fill in the real details
 
-I couldn't find verified public details (phone, address, Google listing) for a Naseem Al Lail salon in Muscat, so the values below are **placeholders**:
+The address is filled in (Shop No. 81, Marina Building, Al Khuwair 33). The remaining values below are **placeholders**:
 
 | File | What to change |
 |---|---|
-| `js/config.js` | WhatsApp number, phone, address, Google Place ID or Maps share link, Instagram link, opening hours |
+| `js/config.js` | WhatsApp number, phone, Google Place ID or Maps share link, Instagram link, opening hours |
 | `js/data.js` | Service names and **prices** (the current prices are *examples* typical for Muscat), packages |
 | `images/gallery/` | Replace the placeholder `.svg` artwork with real salon photos (`.jpg`/`.webp`), then update the paths in `js/data.js` |
 | `index.html` | "About" text and the stats in the hero section, if they need to change |

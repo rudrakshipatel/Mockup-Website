@@ -18,10 +18,9 @@ window.SALON_CONFIG = {
   phoneDial: "+96890000000",
 
   // Address shown on the site (per language).
-  // TODO: replace with the exact address / building / area.
   address: {
-    en: "Muscat, Sultanate of Oman",
-    ar: "مسقط، سلطنة عُمان"
+    en: "Shop No. 81, Marina Building, Al Maha Street, Way No. 4717, Al Khuwair 33, Muscat, Oman",
+    ar: "محل رقم ٨١، بناية مارينا، شارع المها، سكة رقم ٤٧١٧، الخوير ٣٣، مسقط، سلطنة عُمان"
   },
 
   // Google Maps / Google Business Profile.
@@ -32,7 +31,7 @@ window.SALON_CONFIG = {
   //    salon's exact profile. TODO: add the Place ID.
   //  - googleListingUrl: optional — paste the share link from Google Maps
   //    (e.g. https://maps.app.goo.gl/xxxx). Takes priority when set.
-  mapsQuery: "Naseem Al Lail Ladies Beauty Salon, Muscat, Oman",
+  mapsQuery: "Marina Building, Al Maha Street, Al Khuwair 33, Muscat, Oman",
   googlePlaceId: "",
   googleListingUrl: "",
 
