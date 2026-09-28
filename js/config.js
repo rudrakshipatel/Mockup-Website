@@ -9,13 +9,11 @@
  */
 window.SALON_CONFIG = {
   // WhatsApp number in international format, digits only (968 = Oman).
-  // TODO: replace with the salon's real WhatsApp number.
-  whatsapp: "96890000000",
+  whatsapp: "96898170404",
 
   // Phone number as it should be displayed / dialled.
-  // TODO: replace with the salon's real phone number.
-  phoneDisplay: "+968 9000 0000",
-  phoneDial: "+96890000000",
+  phoneDisplay: "+968 9817 0404",
+  phoneDial: "+96898170404",
 
   // Address shown on the site (per language).
   address: {
@@ -31,24 +29,25 @@ window.SALON_CONFIG = {
   //    salon's exact profile. TODO: add the Place ID.
   //  - googleListingUrl: optional — paste the share link from Google Maps
   //    (e.g. https://maps.app.goo.gl/xxxx). Takes priority when set.
-  mapsQuery: "Marina Building, Al Maha Street, Al Khuwair 33, Muscat, Oman",
+  mapsQuery: "Nasim Al Lail Ladies Beauty Salon, Marina Building, Al Khuwair 33, Muscat, Oman",
   googlePlaceId: "",
   googleListingUrl: "",
 
-  // Social links. TODO: add the real Instagram handle.
-  instagram: "https://www.instagram.com/",
+  // Instagram profile URL, e.g. "https://www.instagram.com/handle/".
+  // Instagram links stay hidden while this is empty. TODO: add the handle.
+  instagram: "",
 
   // Opening hours used for the hours table and the "Open now" badge.
   // Day index: 0 = Sunday … 6 = Saturday. Times are 24h, Muscat time (GMT+4).
   // Set a day to null if the salon is closed.
   hours: {
-    0: ["10:00", "22:00"],
-    1: ["10:00", "22:00"],
-    2: ["10:00", "22:00"],
-    3: ["10:00", "22:00"],
-    4: ["10:00", "22:00"],
-    5: ["14:00", "22:00"],
-    6: ["10:00", "22:00"]
+    0: ["09:30", "22:00"],
+    1: ["09:30", "22:00"],
+    2: ["09:30", "22:00"],
+    3: ["09:30", "22:00"],
+    4: ["09:30", "22:00"],
+    5: ["11:00", "22:00"],
+    6: ["09:30", "22:00"]
   },
 
   // Language shown to first-time visitors ("en" or "ar").

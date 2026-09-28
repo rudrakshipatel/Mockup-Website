@@ -1,6 +1,6 @@
-# Naseem Al Lail Ladies Beauty Salon — Website
+# Nasim Al Lail Ladies Beauty Salon — Website
 
-A bilingual (English / العربية) website for **Naseem Al Lail Ladies Beauty Salon**, Muscat, Oman.
+A bilingual (English / العربية) website for **Nasim Al Lail Ladies Beauty Salon**, Muscat, Oman.
 It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anywhere: GitHub Pages, Netlify, cPanel and so on.
 
 ## Features
@@ -10,9 +10,8 @@ It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anyw
   - A booking form (name, service, date, time, notes) that turns into a ready-to-send WhatsApp message.
 - **English / Arabic** switch with full right-to-left layout and Arabic fonts (Tajawal and Amiri). The site remembers each visitor's choice. You can also link straight to a language with `?lang=ar`.
 - **Services and price list**
-  - 8 categories, shown as cards and as a price table with tabs.
+  - 7 categories, shown as cards and as a price table with tabs.
   - Prices can be a single amount, a range or a "from" price, and they show Arabic numerals in Arabic.
-- **Bridal and occasion packages.**
 - **Gallery** with category filters and a full-screen image viewer that works with the keyboard.
 - **Google Maps** embedded map, a **Get directions** button, and links to the **Google listing** and **Write a review**.
 - **Opening hours** table with a live "Open now / Closed now" badge on Muscat time, and today's row highlighted.
@@ -20,14 +19,14 @@ It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anyw
 
 ## Before going live: fill in the real details
 
-The address is filled in (Shop No. 81, Marina Building, Al Khuwair 33). The remaining values below are **placeholders**:
+Filled in: address (Shop No. 81, Marina Building, Al Khuwair 33), WhatsApp/phone (+968 9817 0404) and opening hours (9:30 am–10 pm daily, Fridays 11 am–10 pm). Still to confirm:
 
 | File | What to change |
 |---|---|
-| `js/config.js` | WhatsApp number, phone, Google Place ID or Maps share link, Instagram link, opening hours |
-| `js/data.js` | Service names and **prices** (the current prices are *examples* typical for Muscat), packages |
+| `js/config.js` | Google Maps share link or Place ID (the buttons currently search Google Maps for the salon by name and address), Instagram link (hidden until added) |
+| `js/data.js` | Service list and **prices**. The current prices are *examples* typical for Muscat, and the service list hasn't been checked against the salon's menu |
 | `images/gallery/` | Replace the placeholder `.svg` artwork with real salon photos (`.jpg`/`.webp`), then update the paths in `js/data.js` |
-| `index.html` | "About" text and the stats in the hero section, if they need to change |
+| `index.html` | The same links and details are also written into the HTML so they work without JavaScript. Update them there too if they change |
 
 ### Linking the Google Business Profile
 1. Find the salon on Google Maps, click **Share** and copy the link. Paste it into `googleListingUrl`.

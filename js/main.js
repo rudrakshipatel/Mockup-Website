@@ -3,8 +3,7 @@
 
   var CFG = window.SALON_CONFIG;
   var SERVICES = window.SALON_SERVICES;
-  var PACKAGES = window.SALON_PACKAGES;
-  var GALLERY = window.SALON_GALLERY;
+    var GALLERY = window.SALON_GALLERY;
   var FILTERS = window.GALLERY_FILTERS;
 
   /* ---------------------------------------------------------
@@ -12,8 +11,8 @@
    * is captured on load, so the page works without JS too.
    * ------------------------------------------------------- */
   var AR = {
-    "top.hours": "السبت–الخميس ١٠ص–١٠م · الجمعة ٢م–١٠م",
-    "top.ladies": "للسيدات فقط · خصوصية وراحة",
+    "top.hours": "يومياً ٩:٣٠ص–١٠م · الجمعة ١١ص–١٠م",
+    "top.ladies": "صالون تجميل للسيدات · الخوير",
     "brand.name": "نسيم الليل",
     "brand.tag": "صالون تجميل للسيدات",
     "nav.home": "الرئيسية",
@@ -28,32 +27,32 @@
     "cta.chat": "تحدثي معنا",
     "hero.eyebrow": "الخوير · مسقط · سلطنة عُمان",
     "hero.title": "حيث تتألق كل امرأة<br><em>كنسيم الليل</em>",
-    "hero.lead": "ملاذ خاص للسيدات فقط للعناية بالشعر والمكياج وتجهيز العرائس والأظافر والبشرة والحناء — بأيدي خبيرات يهتممن بأدق التفاصيل.",
-    "hero.b1n": "١٠٠٪",
-    "hero.b1": "للسيدات فقط",
-    "hero.b2n": "+٤٠",
-    "hero.b2": "خدمة تجميل",
-    "hero.b3n": "٧",
-    "hero.b3": "أيام في الأسبوع",
-    "hero.cardA": "مكياج العرائس والمناسبات",
-    "hero.cardB": "أدوات فاخرة ومعقمة",
-    "hl.1t": "خصوصية تامة",
-    "hl.1d": "صالون للسيدات فقط بطاقم نسائي وغرف خاصة.",
-    "hl.2t": "النظافة أولاً",
-    "hl.2d": "أدوات معقمة ومستلزمات تُستخدم لمرة واحدة لكل عميلة.",
-    "hl.3t": "خبيرات تجميل",
-    "hl.3d": "مدربات على أحدث صيحات الشعر والمكياج والعرائس.",
-    "hl.4t": "منتجات عالية الجودة",
-    "hl.4d": "علامات احترافية لطيفة على شعرك وبشرتك.",
-    "about.stamp": "جوهرة<br>مسقط",
+    "hero.lead": "صالون تجميل للسيدات في الخوير للعناية بالشعر والمكياج والأظافر والبشرة والحناء. تصفحي خدماتنا واحجزي زيارتك عبر واتساب.",
+    "hero.b1n": "٧",
+    "hero.b1": "أيام في الأسبوع",
+    "hero.b2n": "١٠ م",
+    "hero.b2": "مفتوح حتى",
+    "hero.b3n": "٣٣",
+    "hero.b3": "الخوير",
+    "hero.cardA": "شعر · مكياج · أظافر",
+    "hero.cardB": "حجز سهل عبر واتساب",
+    "hl.1t": "صالون للسيدات",
+    "hl.1d": "صالون تجميل للسيدات في الخوير، مسقط.",
+    "hl.2t": "مفتوح يومياً",
+    "hl.2d": "من ٩:٣٠ ص إلى ١٠ م، والجمعة من ١١ ص إلى ١٠ م.",
+    "hl.3t": "احجزي عبر واتساب",
+    "hl.3d": "أرسلي لنا رسالة وسنؤكد موعدك.",
+    "hl.4t": "سهل الوصول",
+    "hl.4d": "بناية مارينا، شارع المها، الخوير ٣٣.",
+    "about.stamp": "الخوير<br>مسقط",
     "about.eyebrow": "عن الصالون",
-    "about.title": "جمال وهدوء وعناية — تحت سقف واحد",
-    "about.p1": "وُلد صالون نسيم الليل ليمنح نساء مسقط مكاناً يسترخين فيه ويشعرن بالجمال. من السشوار السريع إلى إطلالة العروس الكاملة، يستقبل فريقنا كل زيارة بنفس الدفء والاهتمام.",
-    "about.p2": "نجمع بين التقنيات الحديثة والتقاليد التي تحبها عميلاتنا، مثل المكياج العربي والحناء والحمام المغربي، في مساحة خاصة ومريحة بالكامل.",
-    "about.l1": "فريق وعميلات من السيدات فقط",
-    "about.l2": "متخصصات في العرائس والمناسبات",
+    "about.title": "صالون التجميل الخاص بك في الخوير",
+    "about.p1": "نسيم الليل صالون تجميل للسيدات في بناية مارينا، الخوير ٣٣. سواء كنتِ تحتاجين إلى سشوار أو أظافر جديدة أو إطلالة لمناسبة خاصة، تصفحي خدماتنا هنا واحجزي بضغطة زر.",
+    "about.p2": "تشمل خدماتنا الشعر والمكياج والأظافر والعناية بالبشرة والخيط والحناء. راسلينا على واتساب للاستفسار عن أي خدمة أو للتأكد من المواعيد المتاحة.",
+    "about.l1": "صالون تجميل للسيدات",
+    "about.l2": "مفتوح طوال أيام الأسبوع",
     "about.l3": "حجز سهل عبر واتساب",
-    "about.l4": "خدمة منزلية للعرائس عند الطلب",
+    "about.l4": "مكياج للمناسبات الخاصة",
     "services.eyebrow": "خدماتنا",
     "services.title": "كل ما تحتاجينه لتبدين وتشعري بأفضل حال",
     "services.sub": "اضغطي على أي خدمة لرؤية أسعارها، أو احجزيها مباشرة عبر واتساب.",
@@ -61,19 +60,15 @@
     "services.book": "احجزي",
     "prices.eyebrow": "قائمة الأسعار",
     "prices.title": "أسعار واضحة",
-    "prices.sub": "جميع الأسعار بالريال العُماني. قد يختلف السعر النهائي حسب طول الشعر والاستشارة.",
+    "prices.sub": "الأسعار بالريال العُماني استرشادية فقط. يرجى تأكيد السعر معنا عبر واتساب عند الحجز.",
     "prices.from": "من",
     "prices.book": "احجزي",
-    "pkg.eyebrow": "باقات العرائس والمناسبات",
-    "pkg.title": "يومك المميز بأبهى صورة",
-    "pkg.popular": "الأكثر طلباً",
-    "pkg.book": "احجزي هذه الباقة",
     "gallery.eyebrow": "معرض الصور",
     "gallery.title": "لمحة من أعمالنا",
     "gallery.more": "شاهدي المزيد على إنستغرام",
     "book.eyebrow": "احجزي موعدك",
     "book.title": "احجزي مقعدك في ثوانٍ",
-    "book.p": "املئي النموذج وسنفتح لك واتساب برسالة جاهزة للإرسال. يؤكد فريقنا الموعد فوراً خلال ساعات العمل.",
+    "book.p": "املئي النموذج وسنفتح لك واتساب برسالة جاهزة للإرسال. وسنرد عليك لتأكيد موعدك.",
     "book.s1": "اختاري الخدمة والتاريخ والوقت",
     "book.s2": "أرسلي الرسالة الجاهزة عبر واتساب",
     "book.s3": "استلمي تأكيد الموعد من الصالون",
@@ -102,12 +97,11 @@
     "contact.open": "مفتوح الآن",
     "contact.closed": "مغلق الآن",
     "contact.closedDay": "مغلق",
-    "footer.about": "صالون تجميل للسيدات فقط في مسقط يقدم خدمات الشعر والمكياج والعرائس والأظافر والبشرة والحناء.",
+    "footer.about": "صالون تجميل للسيدات في الخوير، مسقط، يقدم خدمات الشعر والمكياج والأظافر والبشرة والحناء.",
     "footer.links": "روابط سريعة",
-    "footer.packages": "باقات العرائس",
     "footer.book": "احجزي موعداً",
-    "footer.h1": "السبت – الخميس: ١٠:٠٠ ص – ١٠:٠٠ م",
-    "footer.h2": "الجمعة: ٢:٠٠ م – ١٠:٠٠ م",
+    "footer.h1": "السبت – الخميس: ٩:٣٠ ص – ١٠:٠٠ م",
+    "footer.h2": "الجمعة: ١١:٠٠ ص – ١٠:٠٠ م",
     "footer.rights": "صالون نسيم الليل للسيدات. جميع الحقوق محفوظة."
   };
 
@@ -117,8 +111,6 @@
     "services.book": "Book",
     "prices.from": "from",
     "prices.book": "Book",
-    "pkg.popular": "Most popular",
-    "pkg.book": "Book this package",
     "form.choose": "Choose a service…",
     "form.chooseTime": "Choose a time…",
     "form.closed": "The salon is closed on this day",
@@ -129,11 +121,11 @@
 
   var WA_TEXT = {
     general: {
-      en: "Hello Naseem Al Lail, I would like to book an appointment.",
+      en: "Hello Nasim Al Lail, I would like to book an appointment.",
       ar: "مرحباً نسيم الليل، أرغب في حجز موعد."
     },
     service: {
-      en: "Hello Naseem Al Lail, I would like to book: {s}.",
+      en: "Hello Nasim Al Lail, I would like to book: {s}.",
       ar: "مرحباً نسيم الليل، أرغب في حجز: {s}."
     }
   };
@@ -195,7 +187,8 @@
     $$(".js-google").forEach(function (a) { a.href = googleListing(); });
     $$(".js-google-review").forEach(function (a) { a.href = googleReview(); });
     $$(".js-directions").forEach(function (a) { a.href = directions(); });
-    $$(".js-instagram").forEach(function (a) { a.href = CFG.instagram; });
+    $$(".js-instagram").forEach(function (a) { a.href = CFG.instagram; a.hidden = !CFG.instagram; });
+    $$(".js-instagram-wrap").forEach(function (el) { el.hidden = !CFG.instagram; });
     var map = $("#mapFrame");
     var src = "https://maps.google.com/maps?q=" + encodeURIComponent(CFG.mapsQuery) +
       "&hl=" + lang + "&z=15&output=embed";
@@ -273,19 +266,6 @@
             esc(t("prices.book") + " " + i[lang]) + '"><svg class="i"><use href="#i-whatsapp"/></svg><span>' + t("prices.book") + "</span></a>" +
           "</li>";
       }).join("") + "</ul>";
-  }
-
-  function renderPackages() {
-    $("#packagesGrid").innerHTML = PACKAGES.map(function (p) {
-      return '<article class="package reveal' + (p.featured ? " package--featured" : "") + '">' +
-        (p.featured ? '<span class="package__badge">' + t("pkg.popular") + "</span>" : "") +
-        "<h3>" + esc(p.name[lang]) + "</h3>" +
-        '<p class="package__price"><span>' + t("prices.from") + "</span> " + price(p.price) + "</p>" +
-        '<ul class="checklist">' + p.items[lang].map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ul>" +
-        '<a class="btn btn--block ' + (p.featured ? "btn--gold" : "btn--outline") + '" target="_blank" rel="noopener" href="' +
-          waService(p.name[lang]) + '"><svg class="i"><use href="#i-whatsapp"/></svg> ' + t("pkg.book") + "</a>" +
-        "</article>";
-    }).join("");
   }
 
   var galleryFilter = "all";
@@ -385,17 +365,13 @@
         return '<optgroup label="' + esc(s.name[lang]) + '">' + s.items.map(function (i, n) {
           return '<option value="' + s.id + ":" + n + '">' + esc(i[lang]) + "</option>";
         }).join("") + "</optgroup>";
-      }).join("") +
-      '<optgroup label="' + esc(t("pkg.eyebrow")) + '">' + PACKAGES.map(function (p, n) {
-        return '<option value="pkg:' + n + '">' + esc(p.name[lang]) + "</option>";
-      }).join("") + "</optgroup>";
+      }).join("");
     sel.value = keep;
     renderTimes();
   }
 
   function serviceLabel(v) {
     var p = v.split(":");
-    if (p[0] === "pkg") return PACKAGES[+p[1]].name[lang];
     var s = SERVICES.filter(function (x) { return x.id === p[0]; })[0];
     return s ? s.items[+p[1]][lang] : v;
   }
@@ -409,13 +385,11 @@
       sel.innerHTML = '<option value="">' + t("form.closed") + "</option>";
       return;
     }
-    var start = +h[0].split(":")[0], end = +h[1].split(":")[0];
+    var toMin = function (hm) { var p = hm.split(":"); return +p[0] * 60 + +p[1]; };
     var opts = ['<option value="">' + t("form.chooseTime") + "</option>"];
-    for (var hr = start; hr < end; hr++) {
-      ["00", "30"].forEach(function (m) {
-        var v = (hr < 10 ? "0" : "") + hr + ":" + m;
-        opts.push('<option value="' + v + '">' + fmtTime(v) + "</option>");
-      });
+    for (var m = toMin(h[0]); m < toMin(h[1]); m += 30) {
+      var v = String(Math.floor(m / 60)).padStart(2, "0") + ":" + String(m % 60).padStart(2, "0");
+      opts.push('<option value="' + v + '">' + fmtTime(v) + "</option>");
     }
     sel.innerHTML = opts.join("");
     sel.value = keep;
@@ -437,7 +411,7 @@
       var dateTxt = dateObj.toLocaleDateString(lang === "ar" ? "ar-OM" : "en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
       var lines = lang === "ar"
         ? ["مرحباً نسيم الليل، أرغب في حجز موعد:", "الاسم: " + name, "الخدمة: " + serviceLabel(svc), "التاريخ: " + dateTxt, "الوقت: " + fmtTime(time)]
-        : ["Hello Naseem Al Lail, I would like to book an appointment:", "Name: " + name, "Service: " + serviceLabel(svc), "Date: " + dateTxt, "Time: " + fmtTime(time)];
+        : ["Hello Nasim Al Lail, I would like to book an appointment:", "Name: " + name, "Service: " + serviceLabel(svc), "Date: " + dateTxt, "Time: " + fmtTime(time)];
       var notes = f.notes.value.trim();
       if (notes) lines.push((lang === "ar" ? "ملاحظات: " : "Notes: ") + notes);
       window.open(waLink(lines.join("\n")), "_blank", "noopener");
@@ -467,7 +441,6 @@
     applyLinks();
     renderServices();
     renderTabs();
-    renderPackages();
     renderGallery();
     renderHours();
     renderForm();

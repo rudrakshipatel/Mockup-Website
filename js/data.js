@@ -1,6 +1,6 @@
 /*
  * ============================================================
- *  SERVICES, PRICES, PACKAGES & GALLERY (English + Arabic)
+ *  SERVICES, PRICES & GALLERY (English + Arabic)
  * ============================================================
  *  ⚠️  Prices below are SAMPLE prices typical for Muscat salons.
  *      Replace them with the salon's actual price list.
@@ -41,13 +41,11 @@ window.SALON_SERVICES = [
   {
     id: "bridal", icon: "s-bridal",
     name: { en: "Bridal", ar: "العرائس" },
-    desc: { en: "Complete bridal looks, trials and home service.", ar: "إطلالات عرائس متكاملة، تجربة مسبقة وخدمة منزلية." },
+    desc: { en: "Bridal makeup and hairstyling for your big day.", ar: "مكياج وتسريحة العروس ليومك المميز." },
     items: [
       { en: "Bridal makeup",              ar: "مكياج عروس",                   price: [80, 150] },
       { en: "Bridal hairstyle",           ar: "تسريحة عروس",                  price: [40, 70] },
-      { en: "Bridal trial session",       ar: "جلسة تجربة للعروس",            price: [30, 50] },
-      { en: "Bride's mother / sister makeup", ar: "مكياج أم / أخت العروس",    price: [25, 40] },
-      { en: "Home service (bridal)",      ar: "خدمة منزلية للعروس",           price: [30, null] }
+      { en: "Bride's mother / sister makeup", ar: "مكياج أم / أخت العروس",    price: [25, 40] }
     ]
   },
   {
@@ -73,7 +71,6 @@ window.SALON_SERVICES = [
       { en: "Express facial",             ar: "تنظيف بشرة سريع",              price: 12 },
       { en: "Deep cleansing facial",      ar: "تنظيف بشرة عميق",              price: [18, 25] },
       { en: "Hydrating / glow facial",    ar: "جلسة ترطيب ونضارة",            price: [20, 30] },
-      { en: "Hydrafacial",                ar: "هيدرافيشل",                    price: [30, 45] },
       { en: "Face mask add-on",           ar: "ماسك إضافي",                   price: 5 }
     ]
   },
@@ -103,47 +100,6 @@ window.SALON_SERVICES = [
       { en: "Bridal henna",               ar: "حناء عروس",                    price: [25, 50] },
       { en: "Hair henna",                 ar: "حناء للشعر",                   price: [8, 12] }
     ]
-  },
-  {
-    id: "spa", icon: "s-spa",
-    name: { en: "Moroccan Bath & Body", ar: "الحمام المغربي والجسم" },
-    desc: { en: "Traditional Moroccan bath, scrubs & relaxation.", ar: "حمام مغربي تقليدي، تقشير واسترخاء." },
-    items: [
-      { en: "Moroccan bath",              ar: "حمام مغربي",                   price: [15, 20] },
-      { en: "Royal Moroccan bath",        ar: "حمام مغربي ملكي",              price: [25, 35] },
-      { en: "Body scrub",                 ar: "تقشير الجسم",                  price: [12, 18] },
-      { en: "Relaxing body massage (60 min)", ar: "مساج استرخاء للجسم (٦٠ دقيقة)", price: [20, 30] }
-    ]
-  }
-];
-
-window.SALON_PACKAGES = [
-  {
-    name: { en: "Glow Package", ar: "باقة النضارة" },
-    price: 35,
-    featured: false,
-    items: {
-      en: ["Deep cleansing facial", "Eyebrow threading", "Classic mani + pedi", "Blow-dry"],
-      ar: ["تنظيف بشرة عميق", "حواجب بالخيط", "مانيكير + باديكير", "سشوار"]
-    }
-  },
-  {
-    name: { en: "Royal Bride", ar: "العروس الملكية" },
-    price: 250,
-    featured: true,
-    items: {
-      en: ["Bridal makeup & hairstyle", "Trial session", "Royal Moroccan bath", "Bridal henna", "Gel mani + pedi", "Facial & full body waxing"],
-      ar: ["مكياج وتسريحة عروس", "جلسة تجربة", "حمام مغربي ملكي", "حناء عروس", "مانيكير وباديكير جل", "تنظيف بشرة وشمع كامل"]
-    }
-  },
-  {
-    name: { en: "Occasion Ready", ar: "جاهزة للمناسبة" },
-    price: 45,
-    featured: false,
-    items: {
-      en: ["Party makeup", "Occasion hairstyle", "Eyelashes", "Gel polish (hands)"],
-      ar: ["مكياج سهرة", "تسريحة مناسبات", "رموش", "طلاء جل لليدين"]
-    }
   }
 ];
 
