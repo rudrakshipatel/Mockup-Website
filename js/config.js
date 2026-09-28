@@ -31,11 +31,10 @@ window.SALON_CONFIG = {
   //    (e.g. https://maps.app.goo.gl/xxxx). Takes priority when set.
   mapsQuery: "Nasim Al Lail Ladies Beauty Salon, Marina Building, Al Khuwair 33, Muscat, Oman",
   googlePlaceId: "",
-  googleListingUrl: "",
+  googleListingUrl: "https://maps.app.goo.gl/hpRAdn1WAW1pne8a7",
 
-  // Instagram profile URL, e.g. "https://www.instagram.com/handle/".
-  // Instagram links stay hidden while this is empty. TODO: add the handle.
-  instagram: "",
+  // Instagram profile URL. Instagram links stay hidden while this is empty.
+  instagram: "https://www.instagram.com/nasim_alail07/",
 
   // Opening hours used for the hours table and the "Open now" badge.
   // Day index: 0 = Sunday … 6 = Saturday. Times are 24h, Muscat time (GMT+4).

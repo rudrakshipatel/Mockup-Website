@@ -23,7 +23,9 @@
     "address": { "@type": "PostalAddress", "streetAddress": "Shop No. 81, Marina Building, Al Maha Street, Way No. 4717", "addressLocality": "Al Khuwair 33, Muscat", "addressCountry": "OM" },
     "priceRange": "OMR",
     "openingHours": ["Sa-Th 09:30-22:00", "Fr 11:00-22:00"],
-    "telephone": "+96898170404"
+    "telephone": "+96898170404",
+    "hasMap": "https://maps.app.goo.gl/hpRAdn1WAW1pne8a7",
+    "sameAs": ["https://www.instagram.com/nasim_alail07/", "https://maps.app.goo.gl/hpRAdn1WAW1pne8a7"]
   }
   </script>
 </head>
@@ -34,6 +36,7 @@
     <div class="container topbar__inner">
       <span class="topbar__item"><svg class="i"><use href="#i-clock"/></svg> <span data-i18n="top.hours">Daily 9:30am–10pm · Fri 11am–10pm</span></span>
       <span class="topbar__item topbar__ladies"><svg class="i"><use href="#i-pin"/></svg> <span data-i18n="top.ladies">Ladies beauty salon · Al Khuwair</span></span>
+      <a class="topbar__item js-instagram" href="https://www.instagram.com/nasim_alail07/" target="_blank" rel="noopener"><svg class="i"><use href="#i-instagram"/></svg> <span dir="ltr">@nasim_alail07</span></a>
       <a class="topbar__item js-phone-link" href="tel:+96898170404"><svg class="i"><use href="#i-phone"/></svg> <span class="js-phone" dir="ltr">+968 9817 0404</span></a>
     </div>
   </div>
@@ -99,7 +102,7 @@
         </div>
         <div class="hero__visual reveal" aria-hidden="true">
           <div class="hero__arch">
-            <img src="images/gallery/bridal-1.svg" alt="">
+            <img class="js-photo" data-photo="hero" src="images/gallery/bridal-1.svg" alt="">
           </div>
           <div class="hero__card hero__card--a">
             <svg class="i"><use href="#i-star"/></svg>
@@ -127,8 +130,8 @@
     <section class="section about" id="about">
       <div class="container about__grid">
         <div class="about__media reveal">
-          <img class="about__img about__img--main" src="images/gallery/salon-1.svg" alt="" loading="lazy">
-          <img class="about__img about__img--sub" src="images/gallery/henna-1.svg" alt="" loading="lazy">
+          <img class="about__img about__img--main js-photo" data-photo="about" src="images/gallery/salon-1.svg" alt="" loading="lazy">
+          <img class="about__img about__img--sub js-photo" data-photo="aboutSmall" src="images/gallery/henna-1.svg" alt="" loading="lazy">
           <div class="about__stamp"><span data-i18n="about.stamp">Al Khuwair<br>Muscat</span></div>
         </div>
         <div class="about__content reveal">
@@ -184,8 +187,8 @@
         </header>
         <div class="filters" id="galleryFilters"><!-- rendered by JS --></div>
         <div class="gallery__grid" id="galleryGrid"><!-- rendered by JS --></div>
-        <p class="gallery__more js-instagram-wrap" hidden>
-          <a class="link-arrow js-instagram" href="#" target="_blank" rel="noopener" data-i18n="gallery.more">See more on Instagram</a>
+        <p class="gallery__more js-instagram-wrap">
+          <a class="link-arrow js-instagram" href="https://www.instagram.com/nasim_alail07/" target="_blank" rel="noopener" data-i18n="gallery.more">See more on Instagram</a>
         </p>
       </div>
     </section>
@@ -240,10 +243,10 @@
         <h2 class="section__title" data-i18n="rev.title">Loved your visit?</h2>
         <p class="section__sub" data-i18n="rev.sub">Read what our clients say, or share your own experience on our Google listing — it helps other ladies in Muscat find us.</p>
         <div class="reviews__ctas">
-          <a class="btn btn--primary js-google" href="https://www.google.com/maps/search/?api=1&amp;query=Nasim%20Al%20Lail%20Ladies%20Beauty%20Salon%2C%20Marina%20Building%2C%20Al%20Khuwair%2033%2C%20Muscat%2C%20Oman" target="_blank" rel="noopener">
+          <a class="btn btn--primary js-google" href="https://maps.app.goo.gl/hpRAdn1WAW1pne8a7" target="_blank" rel="noopener">
             <svg class="i"><use href="#i-google"/></svg> <span data-i18n="rev.read">Read Google reviews</span>
           </a>
-          <a class="btn btn--outline js-google-review" href="https://www.google.com/maps/search/?api=1&amp;query=Nasim%20Al%20Lail%20Ladies%20Beauty%20Salon%2C%20Marina%20Building%2C%20Al%20Khuwair%2033%2C%20Muscat%2C%20Oman" target="_blank" rel="noopener">
+          <a class="btn btn--outline js-google-review" href="https://maps.app.goo.gl/hpRAdn1WAW1pne8a7" target="_blank" rel="noopener">
             <svg class="i"><use href="#i-star"/></svg> <span data-i18n="rev.write">Write a review</span>
           </a>
         </div>
@@ -259,6 +262,7 @@
           <ul class="contact__list">
             <li><svg class="i"><use href="#i-pin"/></svg><div><h4 data-i18n="contact.addr">Address</h4><p class="js-address">Shop No. 81, Marina Building, Al Maha Street, Way No. 4717, Al Khuwair 33, Muscat, Oman</p></div></li>
             <li><svg class="i"><use href="#i-phone"/></svg><div><h4 data-i18n="contact.phone">Phone & WhatsApp</h4><p><a class="js-phone-link" href="tel:+96898170404"><span class="js-phone" dir="ltr">+968 9817 0404</span></a></p></div></li>
+            <li><svg class="i"><use href="#i-instagram"/></svg><div><h4 data-i18n="contact.ig">Instagram</h4><p><a class="js-instagram" href="https://www.instagram.com/nasim_alail07/" target="_blank" rel="noopener" dir="ltr">@nasim_alail07</a></p></div></li>
             <li><svg class="i"><use href="#i-clock"/></svg><div><h4 data-i18n="contact.hours">Opening hours</h4>
               <table class="hours" id="hoursTable"><tr><th>Saturday</th><td>9:30 am – 10 pm</td></tr><tr><th>Sunday</th><td>9:30 am – 10 pm</td></tr><tr><th>Monday</th><td>9:30 am – 10 pm</td></tr><tr><th>Tuesday</th><td>9:30 am – 10 pm</td></tr><tr><th>Wednesday</th><td>9:30 am – 10 pm</td></tr><tr><th>Thursday</th><td>9:30 am – 10 pm</td></tr><tr><th>Friday</th><td>11 am – 10 pm</td></tr></table>
               <p class="open-now" id="openNow"></p>
@@ -266,7 +270,7 @@
           </ul>
           <div class="contact__ctas">
             <a class="btn btn--primary js-directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nasim%20Al%20Lail%20Ladies%20Beauty%20Salon%2C%20Marina%20Building%2C%20Al%20Khuwair%2033%2C%20Muscat%2C%20Oman" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg> <span data-i18n="contact.directions">Get directions</span></a>
-            <a class="btn btn--outline js-google" href="https://www.google.com/maps/search/?api=1&amp;query=Nasim%20Al%20Lail%20Ladies%20Beauty%20Salon%2C%20Marina%20Building%2C%20Al%20Khuwair%2033%2C%20Muscat%2C%20Oman" target="_blank" rel="noopener"><svg class="i"><use href="#i-google"/></svg> <span data-i18n="contact.listing">Google listing</span></a>
+            <a class="btn btn--outline js-google" href="https://maps.app.goo.gl/hpRAdn1WAW1pne8a7" target="_blank" rel="noopener"><svg class="i"><use href="#i-google"/></svg> <span data-i18n="contact.listing">Google listing</span></a>
           </div>
         </div>
         <div class="contact__map reveal">
@@ -289,9 +293,9 @@
         </a>
         <p class="footer__about" data-i18n="footer.about">A ladies beauty salon in Al Khuwair, Muscat, offering hair, makeup, nails, skincare and henna services.</p>
         <div class="socials">
-          <a class="js-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden><svg class="i"><use href="#i-instagram"/></svg></a>
+          <a class="js-instagram" href="https://www.instagram.com/nasim_alail07/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#i-instagram"/></svg></a>
           <a class="js-wa" data-wa-msg="general" href="https://wa.me/96898170404?text=Hello%20Nasim%20Al%20Lail%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-whatsapp"/></svg></a>
-          <a class="js-google" href="https://www.google.com/maps/search/?api=1&amp;query=Nasim%20Al%20Lail%20Ladies%20Beauty%20Salon%2C%20Marina%20Building%2C%20Al%20Khuwair%2033%2C%20Muscat%2C%20Oman" target="_blank" rel="noopener" aria-label="Google"><svg class="i"><use href="#i-google"/></svg></a>
+          <a class="js-google" href="https://maps.app.goo.gl/hpRAdn1WAW1pne8a7" target="_blank" rel="noopener" aria-label="Google"><svg class="i"><use href="#i-google"/></svg></a>
         </div>
       </div>
       <div>

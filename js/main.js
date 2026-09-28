@@ -91,6 +91,7 @@
     "contact.title": "موقعنا في الخوير",
     "contact.addr": "العنوان",
     "contact.phone": "الهاتف وواتساب",
+    "contact.ig": "إنستغرام",
     "contact.hours": "ساعات العمل",
     "contact.directions": "الاتجاهات",
     "contact.listing": "صفحتنا على Google",
@@ -189,6 +190,11 @@
     $$(".js-directions").forEach(function (a) { a.href = directions(); });
     $$(".js-instagram").forEach(function (a) { a.href = CFG.instagram; a.hidden = !CFG.instagram; });
     $$(".js-instagram-wrap").forEach(function (el) { el.hidden = !CFG.instagram; });
+    var photos = window.SALON_PHOTOS || {};
+    $$(".js-photo").forEach(function (img) {
+      var src = photos[img.getAttribute("data-photo")];
+      if (src && img.getAttribute("src") !== src) img.src = src;
+    });
     var map = $("#mapFrame");
     var src = "https://maps.google.com/maps?q=" + encodeURIComponent(CFG.mapsQuery) +
       "&hl=" + lang + "&z=15&output=embed";

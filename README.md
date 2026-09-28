@@ -19,13 +19,13 @@ It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anyw
 
 ## Before going live: fill in the real details
 
-Filled in: address (Shop No. 81, Marina Building, Al Khuwair 33), WhatsApp/phone (+968 9817 0404) and opening hours (9:30 am–10 pm daily, Fridays 11 am–10 pm). Still to confirm:
+Filled in: address (Shop No. 81, Marina Building, Al Khuwair 33), WhatsApp/phone (+968 9817 0404), opening hours (9:30 am–10 pm daily, Fridays 11 am–10 pm), Instagram ([@nasim_alail07](https://www.instagram.com/nasim_alail07/)) and the Google Maps listing (<https://maps.app.goo.gl/hpRAdn1WAW1pne8a7>). Still to confirm:
 
 | File | What to change |
 |---|---|
-| `js/config.js` | Google Maps share link or Place ID (the buttons currently search Google Maps for the salon by name and address), Instagram link (hidden until added) |
+| `js/config.js` | Google Place ID (optional): lets "Write a review" open Google's review box directly instead of the listing |
 | `js/data.js` | Service list and **prices**. The current prices are *examples* typical for Muscat, and the service list hasn't been checked against the salon's menu |
-| `images/gallery/` | Replace the placeholder `.svg` artwork with real salon photos (`.jpg`/`.webp`), then update the paths in `js/data.js` |
+| `images/gallery/` | Add the salon's real photos (see below) |
 | `index.html` | The same links and details are also written into the HTML so they work without JavaScript. Update them there too if they change |
 
 ### Linking the Google Business Profile
@@ -33,6 +33,12 @@ Filled in: address (Shop No. 81, Marina Building, Al Khuwair 33), WhatsApp/phone
 2. For the "Write a review" button, get the **Place ID** from
    <https://developers.google.com/maps/documentation/places/web-service/place-id> and paste it into `googlePlaceId`.
 3. Set `mapsQuery` to the exact business name as it appears on Google, or to `"lat,lng"` coordinates, so the map points to the right spot.
+
+## Adding the salon's photos
+
+1. Save the photos (for example from the salon's Google listing or Instagram, with the owner's permission) into `images/gallery/`. Use `.jpg` or `.webp`, around 1200px on the long side.
+2. In `js/data.js`, point `SALON_PHOTOS` (hero and About images) and each `SALON_GALLERY` entry at the new files, and set the category and caption.
+3. For visitors without JavaScript, also update the three `src="images/gallery/…svg"` values on the hero and About images in `index.html`.
 
 ## Running locally
 

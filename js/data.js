@@ -103,6 +103,14 @@ window.SALON_SERVICES = [
   }
 ];
 
+// Photos used in the hero and About sections.
+// Put real salon photos in images/gallery/ and point these at them.
+window.SALON_PHOTOS = {
+  hero: "images/gallery/bridal-1.svg",
+  about: "images/gallery/salon-1.svg",
+  aboutSmall: "images/gallery/henna-1.svg"
+};
+
 // Gallery — replace the .svg placeholders with real salon photos (jpg/webp).
 window.SALON_GALLERY = [
   { src: "images/gallery/bridal-1.svg", cat: "bridal", cap: { en: "Bridal look",        ar: "إطلالة عروس" } },
