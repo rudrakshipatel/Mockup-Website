@@ -1,6 +1,8 @@
 # Nasim Al Lail Ladies Beauty Salon — Website
 
 A bilingual (English / العربية) website for **Nasim Al Lail Ladies Beauty Salon**, Muscat, Oman.
+
+> **Demo site.** This is a sample website made by Rudrakshi Patel to show the salon. It is not their official site. It carries `noindex` so search engines don't list it, the footer says it's a sample, prices are marked as sample prices, and placeholder images say "Your photos here".
 It's plain HTML, CSS and JavaScript with no build step, so it can be hosted anywhere: GitHub Pages, Netlify, cPanel and so on.
 
 ## Features
@@ -39,6 +41,28 @@ Filled in: address (Shop No. 81, Marina Building, Al Khuwair 33), WhatsApp/phone
 1. Save the photos (for example from the salon's Google listing or Instagram, with the owner's permission) into `images/gallery/`. Use `.jpg` or `.webp`, around 1200px on the long side.
 2. In `js/data.js`, point `SALON_PHOTOS` (hero and About images) and each `SALON_GALLERY` entry at the new files, and set the category and caption.
 3. For visitors without JavaScript, also update the three `src="images/gallery/…svg"` values on the hero and About images in `index.html`.
+
+## Adding Google reviews
+
+Add 2–3 reviews to `SALON_REVIEWS` in `js/data.js`. Copy the text word for word from the salon's Google listing, and use the reviewer's first name only:
+
+```js
+window.SALON_REVIEWS = [
+  { name: "Aisha", stars: 5, text: "Exact review text from Google…" }
+];
+```
+
+The review cards stay hidden while the list is empty. The rating shown (5.0 from 100+ reviews) is set in `index.html` and `js/main.js` (Arabic).
+
+## Static copy for visitors without JavaScript
+
+`index.html` includes an English copy of the services, price list, gallery, reviews and booking options between `<!-- prerender:… -->` markers. That way link previews and simple checkers still see the content. After editing `js/data.js` or `js/config.js`, refresh it with:
+
+```bash
+node tools/prerender.js
+```
+
+(Node.js only, no packages to install.)
 
 ## Running locally
 

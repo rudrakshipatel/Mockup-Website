@@ -32,8 +32,8 @@
     "hero.b1": "أيام في الأسبوع",
     "hero.b2n": "١٠ م",
     "hero.b2": "مفتوح حتى",
-    "hero.b3n": "٣٣",
-    "hero.b3": "الخوير",
+    "hero.b3n": "٥٫٠",
+    "hero.b3": "+١٠٠ تقييم على Google",
     "hero.cardA": "شعر · مكياج · أظافر",
     "hero.cardB": "حجز سهل عبر واتساب",
     "hl.1t": "صالون للسيدات",
@@ -57,11 +57,15 @@
     "services.title": "كل ما تحتاجينه لتبدين وتشعري بأفضل حال",
     "services.sub": "اضغطي على أي خدمة لرؤية أسعارها، أو احجزيها مباشرة عبر واتساب.",
     "services.viewPrices": "الأسعار",
+    "prices.sampleTag": "سعر تجريبي",
+    "gallery.placeholder": "صورك هنا",
     "services.book": "احجزي",
     "prices.eyebrow": "قائمة الأسعار",
     "prices.title": "أسعار واضحة",
-    "prices.sub": "الأسعار بالريال العُماني استرشادية فقط. يرجى تأكيد السعر معنا عبر واتساب عند الحجز.",
+    "prices.sub": "جميع الأسعار بالريال العُماني.",
     "prices.from": "من",
+    "prices.sampleTitle": "أسعار تجريبية",
+    "prices.sampleText": "هذه الأسعار أمثلة لهذا الموقع التجريبي وليست قائمة أسعار الصالون. يرجى سؤال الصالون عن الأسعار الحالية.",
     "prices.book": "احجزي",
     "gallery.eyebrow": "معرض الصور",
     "gallery.title": "لمحة من أعمالنا",
@@ -83,6 +87,8 @@
     "form.choose": "اختاري الخدمة…",
     "form.chooseTime": "اختاري الوقت…",
     "form.closed": "الصالون مغلق في هذا اليوم",
+    "rev.score": "٥٫٠",
+    "rev.count": "من أكثر من ١٠٠ تقييم على Google",
     "rev.title": "هل أعجبتك زيارتك؟",
     "rev.sub": "اقرئي آراء عميلاتنا أو شاركي تجربتك على صفحتنا في Google — فهذا يساعد سيدات مسقط في العثور علينا.",
     "rev.read": "آراء Google",
@@ -103,13 +109,16 @@
     "footer.book": "احجزي موعداً",
     "footer.h1": "السبت – الخميس: ٩:٣٠ ص – ١٠:٠٠ م",
     "footer.h2": "الجمعة: ١١:٠٠ ص – ١٠:٠٠ م",
-    "footer.rights": "صالون نسيم الليل للسيدات. جميع الحقوق محفوظة."
+    "footer.rights": "صالون نسيم الليل للسيدات. جميع الحقوق محفوظة.",
+    "footer.demo": "موقع تجريبي من إعداد Rudrakshi Patel. ليس الموقع الرسمي للصالون."
   };
 
   // English strings used only by JS-rendered parts.
   var EN_EXTRA = {
     "services.viewPrices": "Prices",
     "services.book": "Book",
+    "prices.sampleTag": "Sample price",
+    "gallery.placeholder": "Your photos here",
     "prices.from": "from",
     "prices.book": "Book",
     "form.choose": "Choose a service…",
@@ -216,19 +225,22 @@
   }
 
   /* ---------------- Renderers ---------------- */
-  function renderServices() {
-    $("#servicesGrid").innerHTML = SERVICES.map(function (s) {
+  function servicesHTML() {
+    return SERVICES.map(function (s) {
       return '<article class="service-card reveal">' +
         '<div class="service-card__icon"><svg><use href="#' + s.icon + '"/></svg></div>' +
         "<h3>" + esc(s.name[lang]) + "</h3>" +
         "<p>" + esc(s.desc[lang]) + "</p>" +
-        '<div class="service-card__meta"><span>' + price(minMax(s.items)) + "</span></div>" +
+        '<div class="service-card__meta"><span>' + price(minMax(s.items)) + '</span><span class="sample-tag">' + t("prices.sampleTag") + "</span></div>" +
         '<div class="service-card__actions">' +
           '<a href="#prices" class="link-arrow" data-tab="' + s.id + '">' + t("services.viewPrices") + "</a>" +
           '<a class="btn btn--sm btn--whatsapp" target="_blank" rel="noopener" href="' + waService(s.name[lang]) + '">' +
             '<svg class="i"><use href="#i-whatsapp"/></svg> ' + t("services.book") + "</a>" +
         "</div></article>";
     }).join("");
+  }
+  function renderServices() {
+    $("#servicesGrid").innerHTML = servicesHTML();
     $$("#servicesGrid [data-tab]").forEach(function (a) {
       a.addEventListener("click", function () { selectTab(a.getAttribute("data-tab")); });
     });
@@ -260,10 +272,8 @@
     if (btn && btn.scrollIntoView) btn.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
   }
 
-  function renderPricePanel() {
-    var s = SERVICES.filter(function (x) { return x.id === activeTab; })[0];
-    $("#pricePanel").innerHTML =
-      '<ul class="price-list">' + s.items.map(function (i) {
+  function priceListHTML(s) {
+    return '<ul class="price-list">' + s.items.map(function (i) {
         return '<li class="price-item">' +
           '<span class="price-item__name">' + esc(i[lang]) + "</span>" +
           '<span class="price-item__dots" aria-hidden="true"></span>' +
@@ -273,26 +283,61 @@
           "</li>";
       }).join("") + "</ul>";
   }
+  // Every category stacked with a heading: used for the no-JavaScript copy.
+  function allPricesHTML() {
+    return SERVICES.map(function (s) {
+      return '<h3 class="price-group__title">' + esc(s.name[lang]) + "</h3>" + priceListHTML(s);
+    }).join("");
+  }
+  function renderPricePanel() {
+    var s = SERVICES.filter(function (x) { return x.id === activeTab; })[0];
+    $("#pricePanel").innerHTML = priceListHTML(s);
+  }
 
   var galleryFilter = "all";
   var visibleGallery = [];
-  function renderGallery() {
-    $("#galleryFilters").innerHTML = FILTERS.map(function (f) {
+  function filtersHTML() {
+    return FILTERS.map(function (f) {
       return '<button type="button" class="chip' + (f.id === galleryFilter ? " is-active" : "") + '" data-f="' + f.id + '">' +
         esc(f[lang]) + "</button>";
     }).join("");
+  }
+  // Placeholder artwork (.svg) is labelled so nobody mistakes it for real work.
+  function isPlaceholder(src) { return /\.svg$/i.test(src); }
+  function galleryHTML(list) {
+    return list.map(function (g, idx) {
+      var ph = isPlaceholder(g.src);
+      return '<button type="button" class="gallery__item' + (ph ? " is-placeholder" : "") + '" data-idx="' + idx + '">' +
+        '<img src="' + g.src + '" alt="' + esc(ph ? t("gallery.placeholder") : g.cap[lang]) + '" loading="lazy" decoding="async">' +
+        (ph ? '<span class="gallery__placeholder">' + t("gallery.placeholder") + "</span>" : "") +
+        '<span class="gallery__cap">' + esc(g.cap[lang]) + "</span></button>";
+    }).join("");
+  }
+  function renderGallery() {
+    $("#galleryFilters").innerHTML = filtersHTML();
     $$("#galleryFilters .chip").forEach(function (b) {
       b.addEventListener("click", function () { galleryFilter = b.getAttribute("data-f"); renderGallery(); });
     });
     visibleGallery = GALLERY.filter(function (g) { return galleryFilter === "all" || g.cat === galleryFilter; });
-    $("#galleryGrid").innerHTML = visibleGallery.map(function (g, idx) {
-      return '<button type="button" class="gallery__item" data-idx="' + idx + '">' +
-        '<img src="' + g.src + '" alt="' + esc(g.cap[lang]) + '" loading="lazy" decoding="async">' +
-        '<span class="gallery__cap">' + esc(g.cap[lang]) + "</span></button>";
-    }).join("");
+    $("#galleryGrid").innerHTML = galleryHTML(visibleGallery);
     $$("#galleryGrid .gallery__item").forEach(function (b) {
       b.addEventListener("click", function () { openLightbox(+b.getAttribute("data-idx")); });
     });
+  }
+
+  /* ---------------- Reviews ---------------- */
+  function reviewsHTML() {
+    return (window.SALON_REVIEWS || []).map(function (r) {
+      return '<figure class="review reveal"><div class="review__stars" aria-label="' + r.stars + ' / 5">' +
+        new Array(r.stars + 1).join('<svg class="i"><use href="#i-star"/></svg>') + "</div>" +
+        "<blockquote>" + esc(r.text) + "</blockquote>" +
+        "<figcaption>" + esc(r.name) + ' <span>· Google</span></figcaption></figure>';
+    }).join("");
+  }
+  function renderReviews() {
+    var grid = $("#reviewsGrid");
+    grid.innerHTML = reviewsHTML();
+    grid.hidden = !grid.children.length;
   }
 
   /* ---------------- Lightbox ---------------- */
@@ -308,7 +353,7 @@
     var g = visibleGallery[lbIdx];
     $("#lightboxImg").src = g.src;
     $("#lightboxImg").alt = g.cap[lang];
-    $("#lightboxCap").textContent = g.cap[lang];
+    $("#lightboxCap").textContent = g.cap[lang] + (isPlaceholder(g.src) ? " · " + t("gallery.placeholder") : "");
   }
   function closeLb() {
     $("#lightbox").hidden = true;
@@ -364,14 +409,17 @@
   }
 
   /* ---------------- Booking form ---------------- */
-  function renderForm() {
-    var sel = $("#bService"), keep = sel.value;
-    sel.innerHTML = '<option value="">' + t("form.choose") + "</option>" +
+  function serviceOptionsHTML() {
+    return '<option value="">' + t("form.choose") + "</option>" +
       SERVICES.map(function (s) {
         return '<optgroup label="' + esc(s.name[lang]) + '">' + s.items.map(function (i, n) {
           return '<option value="' + s.id + ":" + n + '">' + esc(i[lang]) + "</option>";
         }).join("") + "</optgroup>";
       }).join("");
+  }
+  function renderForm() {
+    var sel = $("#bService"), keep = sel.value;
+    sel.innerHTML = serviceOptionsHTML();
     sel.value = keep;
     renderTimes();
   }
@@ -448,6 +496,7 @@
     renderServices();
     renderTabs();
     renderGallery();
+    renderReviews();
     renderHours();
     renderForm();
     observeReveals();
@@ -506,6 +555,15 @@
   }
 
   /* ---------------- Boot ---------------- */
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = {
+      servicesHTML: servicesHTML, allPricesHTML: allPricesHTML, filtersHTML: filtersHTML,
+      galleryHTML: function () { return galleryHTML(GALLERY); },
+      serviceOptionsHTML: serviceOptionsHTML, reviewsHTML: reviewsHTML
+    };
+    return;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     captureEnglish();
     $("#year").textContent = new Date().getFullYear();

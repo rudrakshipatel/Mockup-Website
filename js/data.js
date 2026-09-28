@@ -103,6 +103,12 @@ window.SALON_SERVICES = [
   }
 ];
 
+// Google reviews shown in the "Loved your visit?" section.
+// Copy them word for word from the salon's Google listing, with the
+// reviewer's first name only. The block stays hidden while this is empty.
+// Example entry: { name: "Aisha", stars: 5, text: "Exact review text…" }
+window.SALON_REVIEWS = [];
+
 // Photos used in the hero and About sections.
 // Put real salon photos in images/gallery/ and point these at them.
 window.SALON_PHOTOS = {
